@@ -8,7 +8,7 @@
 # testing
 /coverage
 /src/components/Test*
-
+backup.db.json
 # production
 /build
 
