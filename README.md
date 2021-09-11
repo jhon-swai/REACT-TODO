@@ -25,4 +25,5 @@ There is a JSON server for REST  API
 
 ### `npm run server`
 starts the json server
+The server is running on [http://localhost:3001](http://localhost:3001)
 
