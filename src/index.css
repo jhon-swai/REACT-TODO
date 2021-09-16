@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 550px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
@@ -81,12 +81,14 @@ body {
   padding-right: 10px;
   flex-direction: row;
 }
+
 .ch-checkbox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-right: 10px;
 }
+
 .ch-delete-task {
   display: flex;
   flex-direction: row;
