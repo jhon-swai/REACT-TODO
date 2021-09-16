@@ -1,12 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from "react"
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Tasks from './components/Tasks';
-import NoTask from './components/NoTask';
-import AddTask from './components/AddTask';
 import Footer from './components/Footer';
-import About from './components/About'
+import Body from './components/Body';
+import {BrowserRouter as Router} from "react-router-dom"
 
 function App() {
   const [tasks, setTasks] = useState("")
@@ -58,7 +55,7 @@ function App() {
     const taskToToggle = await fetchTask(id)
     const updTask = { ...taskToToggle, completed: !taskToToggle.completed}
 
-    const res = await fetch(`http://localhost:3000/tasks/${id}`, {
+    const res = await fetch(`http://localhost:3001/tasks/${id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json'
@@ -75,6 +72,7 @@ function App() {
   const deleteTask = async (id) => {
     await fetch(`http://localhost/3001/${id}`, {method: 'DELETE'})
     setTasks(tasks.filter((task) => task.id !== id))
+    
   }
 
   // Toggle reminder
@@ -98,25 +96,15 @@ function App() {
   }
 
   return (
-    <Router>
+      <Router>
+
       <div className="container">
-        <Header title="Task Tracker" onShowAddTask={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
- 
-        <Route path='/' exact={true} render={(props) => (
-            <>
-              { showAddTask && <AddTask onAddTask={addTask}/>} 
-
-              {tasks.length > 0 ? 
-                (<Tasks tasks={tasks} onDelete={deleteTask} onToggleReminder={toggleReminder} onToggleTaskCompleted={onToggleTaskCompleted}/>) 
-              :(<NoTask/>)}
-            
-            </>
-          )} /> 
-
-         <Route path='/about' component={About}/>
+        <Header title="Task Tracker" onShowAddTask={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
+        <Body onAddTask={addTask} showAddTask={showAddTask} tasks={tasks} onDelete={deleteTask} onToggleReminder={toggleReminder} 
+        onToggleTaskCompleted={onToggleTaskCompleted}/>         
         <Footer />      
       </div>
-    </Router> 
+      </Router>
   );
 }
 
