@@ -4,7 +4,7 @@
       "id": 1,
       "text": "Doctor's appointment",
       "day": "Feb 6th at 1:30pm",
-      "reminder": false,
+      "reminder": true,
       "completed": false
     },
     {
@@ -12,19 +12,18 @@
       "text": "Meeting at School",
       "day": "Feb 5th at 1:30pm",
       "reminder": false,
-      "completed": false
+      "completed": true
     },
     {
-      "id": 3,
-      "text": "Food shopping",
-      "day": "Feb 8th at 1:30pm",
-      "reminder": true,
-      "completed": false
+      "text": "Get Food",
+      "day": "Sept 18th at 10am",
+      "reminder": false,
+      "id": 3
     },
     {
-      "text": "Feed riley",
-      "day": "Aug 11th at 9:00am",
-      "reminder": true,
+      "text": "Take a nap",
+      "day": "Aug 10th at 3:40pm",
+      "reminder": false,
       "id": 4
     }
   ]
