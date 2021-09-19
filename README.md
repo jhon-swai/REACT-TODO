@@ -27,3 +27,15 @@ There is a JSON server for REST  API
 starts the json server
 The server is running on [http://localhost:3001](http://localhost:3001)
 
+### Sample images 
+The following are a sample screenshots of the pages
+#### Home page
+![Home page](screenshots/task_home.png)
+
+#### Add Task
+![Add Task page](screenshots/task_addtask.png)
+
+#### About
+![About page](screenshots/task_about.png)
+
+
