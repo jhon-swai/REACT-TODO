@@ -16,11 +16,12 @@ const Task = ({ task, onDelete, onToggleReminder , onToggleTaskCompleted}) => {
                     <BiCheckboxChecked style={{color: 'green'}} size={40} onClick={() => onToggleTaskCompleted(task.id) }/>: 
                     <BiCheckbox size={40} onClick={() => onToggleTaskCompleted(task.id) }/>}   
                 </div>
-            </div>
-            <div className="ch-delete-task">
+                <div className="ch-delete-task">
                     <FaTimes  style={{ color: 'red', cursor: 'pointer'}}
                     onClick={() => onDelete(task.id)}/>
             </div>
+            </div>
+            
    
         </div>
     )
