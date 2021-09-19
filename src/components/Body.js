@@ -3,7 +3,7 @@ import NoTask from "./NoTask"
 import Tasks from "./Tasks"
 import About from "./About"
 import { Route, Switch} from "react-router-dom"
-const Body = ({onAddTask, showAddTask, tasks, onDelete, onToggleReminder, onToggleTaskCompleted}) => {
+const Body = ({onAddTask, tasks, onDelete, onToggleReminder, onToggleTaskCompleted}) => {
     return (
         <div>
             <Switch>

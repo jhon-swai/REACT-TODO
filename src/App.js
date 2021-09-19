@@ -8,7 +8,7 @@ import {BrowserRouter as Router} from "react-router-dom"
 function App() {
   const [tasks, setTasks] = useState("")
 
-  const [showAddTask, setShowAddTask] = useState(false);
+  
 
   useEffect(() => {
     
@@ -100,7 +100,7 @@ function App() {
 
       <div className="container">
         <Header title="Task Tracker" onShowAddTask={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
-        <Body onAddTask={addTask} showAddTask={showAddTask} tasks={tasks} onDelete={deleteTask} onToggleReminder={toggleReminder} 
+        <Body onAddTask={addTask} tasks={tasks} onDelete={deleteTask} onToggleReminder={toggleReminder} 
         onToggleTaskCompleted={onToggleTaskCompleted}/>         
         <Footer />      
       </div>
