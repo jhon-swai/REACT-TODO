@@ -12,10 +12,10 @@ const Header = ({ title, onShowAddTask, showAdd }) => {
              {   
                  location.pathname === "/addTask" ? 
                  <Link to="/">
-                     <Button color="Red" text="Close" onClick={onShowAddTask}/> 
+                     <Button color="Red" text="Close"/> 
                  </Link>
                  : <Link to="/addTask">
-                     <Button color="Green" text="Add" onClick={onShowAddTask}/>
+                     <Button color="Green" text="Add" />
                  </Link>
              }       
         </header>
